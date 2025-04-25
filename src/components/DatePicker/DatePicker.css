@@ -1,0 +1,17 @@
+.datepicker-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .datepicker-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .datepicker-input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }  

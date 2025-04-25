@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Modal from '../components/Modal/Modal'
 import Dropdown from '../components/Dropdown/Dropdown'
+import DatePicker from '../components/DatePicker/DatePicker'
 
 const departments = ['Marketing', 'Sales', 'Engineering', 'HR']
 const states = ['California', 'Texas', 'Florida', 'New York']
@@ -9,6 +10,8 @@ export default function CreateEmployee() {
   const [showModal, setShowModal] = useState(false)
   const [department, setDepartment] = useState('')
   const [state, setState] = useState('')
+  const [birthDate, setBirthDate] = useState('')
+  const [startDate, setStartDate] = useState('')
 
   return (
     <>
@@ -28,6 +31,20 @@ export default function CreateEmployee() {
         options={states}
         value={state}
         onChange={setState}
+      />
+      
+      <DatePicker
+        label="Date de naissance"
+        name="birth-date"
+        value={birthDate}
+        onChange={setBirthDate}
+      />
+
+      <DatePicker
+        label="Date de début"
+        name="start-date"
+        value={startDate}
+        onChange={setStartDate}
       />
 
       <button onClick={() => setShowModal(true)}>Enregistrer</button>

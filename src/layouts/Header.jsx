@@ -6,8 +6,26 @@ export default function Header() {
     <header>
       <h1>HRnet</h1>
       <nav>
-        <NavLink to="/">Créer un employé</NavLink>
-        <NavLink to="/employees">Liste des employés</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Accueil
+        </NavLink>{" "}
+        |{" "}
+        <NavLink
+          to="/create"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Créer
+        </NavLink>{" "}
+        |{" "}
+        <NavLink
+          to="/employees"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Employés
+        </NavLink>
       </nav>
     </header>
   )

@@ -13,3 +13,18 @@ body {
   h1, h2, h3 {
     margin: 0 0 1rem;
   }  
+
+  nav a {
+    padding: 6px 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+  }  
+  
+  main {
+    padding: 2rem 1rem; /* ✅ Ajoute de l'espace autour du contenu principal */
+  }

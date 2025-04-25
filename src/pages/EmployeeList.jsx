@@ -1,29 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { loadEmployees } from '../store/employeesSlice'
 import Table from '../components/Table/Table'
 
-const employees = [
-  {
-    firstName: 'Alice',
-    lastName: 'Durand',
-    department: 'Marketing',
-    state: 'California',
-    startDate: '2023-02-01'
-  },
-  {
-    firstName: 'Bob',
-    lastName: 'Martin',
-    department: 'Engineering',
-    state: 'Texas',
-    startDate: '2022-07-15'
-  }
-]
-
-
 export default function EmployeeList() {
+  const dispatch = useDispatch()
+  const employees = useSelector((state) => state.employees)
+
+  useEffect(() => {
+    dispatch(loadEmployees())
+  }, [dispatch])
+
   return (
     <section>
       <h2>Liste des employés</h2>
+      {employees.length > 0 ? (
         <Table data={employees} />
+      ) : (
+        <p>Aucun employé enregistré pour l’instant.</p>
+      )}
     </section>
   )
 }

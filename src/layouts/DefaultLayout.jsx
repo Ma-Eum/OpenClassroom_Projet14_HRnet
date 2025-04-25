@@ -1,18 +1,16 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import Header from './Header'
+import Footer from './Footer'
 
 export default function DefaultLayout() {
   return (
     <>
-      <header>
-        <h1>HRnet</h1>
-      </header>
+      <Header />
       <main>
         <Outlet />
       </main>
-      <footer>
-        <p>&copy; 2025 WealthHealth</p>
-      </footer>
+      <Footer />
     </>
   )
 }

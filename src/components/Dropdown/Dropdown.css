@@ -1,0 +1,17 @@
+.dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+  
+  .dropdown-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .dropdown-select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }  

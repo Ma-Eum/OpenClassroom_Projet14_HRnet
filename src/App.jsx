@@ -1,10 +1,7 @@
 import React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './router'
 
 export default function App() {
-  return (
-    <div>
-      <h1>HRnet - Nouvelle version React</h1>
-      <p>Prêt pour la structure propre 🛠️</p>
-    </div>
-  )
+  return <RouterProvider router={router} />
 }

@@ -1,19 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+const initialState = {
+  employees: [],
+}
+
 const employeesSlice = createSlice({
   name: 'employees',
-  initialState: [],
+  initialState,
   reducers: {
     addEmployee: (state, action) => {
-      state.push(action.payload)
-      localStorage.setItem('employees', JSON.stringify(state))
-    },
-    loadEmployees: () => {
-      const data = localStorage.getItem('employees')
-      return data ? JSON.parse(data) : []
+      state.employees.push(action.payload)
     },
   },
 })
 
-export const { addEmployee, loadEmployees } = employeesSlice.actions
+export const { addEmployee } = employeesSlice.actions
 export default employeesSlice.reducer

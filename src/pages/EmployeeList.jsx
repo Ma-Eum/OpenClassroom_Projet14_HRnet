@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { loadEmployees } from '../store/employeesSlice'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import Table from '../components/Table/Table'
 
 export default function EmployeeList() {
-  const dispatch = useDispatch()
-  const employees = useSelector((state) => state.employees)
-
-  useEffect(() => {
-    dispatch(loadEmployees())
-  }, [dispatch])
+  const employees = useSelector((state) => state.employees.employees)
 
   return (
     <section>

@@ -12,22 +12,28 @@ export default function CreateEmployee() {
   const dispatch = useDispatch()
 
   const [showModal, setShowModal] = useState(false)
-  const [department, setDepartment] = useState('')
-  const [state, setState] = useState('')
-  const [birthDate, setBirthDate] = useState('')
-  const [startDate, setStartDate] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
+  const [birthDate, setBirthDate] = useState('')
+  const [startDate, setStartDate] = useState('')
+  const [street, setStreet] = useState('')
+  const [city, setCity] = useState('')
+  const [state, setState] = useState('')
+  const [zipCode, setZipCode] = useState('')
+  const [department, setDepartment] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
     const newEmployee = {
       firstName,
       lastName,
-      department,
-      state,
       birthDate,
       startDate,
+      street,
+      city,
+      state,
+      zipCode,
+      department,
     }
     dispatch(addEmployee(newEmployee))
     setShowModal(true)
@@ -52,22 +58,6 @@ export default function CreateEmployee() {
           required
         />
 
-        <Dropdown
-          label="Département"
-          name="department"
-          options={departments}
-          value={department}
-          onChange={setDepartment}
-        />
-
-        <Dropdown
-          label="État"
-          name="state"
-          options={states}
-          value={state}
-          onChange={setState}
-        />
-
         <DatePicker
           label="Date de naissance"
           name="birth-date"
@@ -80,6 +70,49 @@ export default function CreateEmployee() {
           name="start-date"
           value={startDate}
           onChange={setStartDate}
+        />
+
+        <fieldset>
+          <legend>Adresse</legend>
+
+          <input
+            type="text"
+            placeholder="Rue"
+            value={street}
+            onChange={(e) => setStreet(e.target.value)}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Ville"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            required
+          />
+
+          <Dropdown
+            label="État"
+            name="state"
+            options={states}
+            value={state}
+            onChange={setState}
+          />
+
+          <input
+            type="text"
+            placeholder="Code postal"
+            value={zipCode}
+            onChange={(e) => setZipCode(e.target.value)}
+            required
+          />
+        </fieldset>
+
+        <Dropdown
+          label="Département"
+          name="department"
+          options={departments}
+          value={department}
+          onChange={setDepartment}
         />
 
         <button type="submit">Enregistrer</button>

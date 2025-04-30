@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addEmployee } from '../store/employeesSlice'
-import Modal from '../components/Modal/Modal'
+import Modal from 'react-modal-wh'
+import 'react-modal-wh/dist/style.css'
 import Dropdown from '../components/Dropdown/Dropdown'
 import DatePicker from '../components/DatePicker/DatePicker'
 
@@ -22,7 +23,6 @@ export default function CreateEmployee() {
   const [zipCode, setZipCode] = useState('')
   const [department, setDepartment] = useState('')
 
-  // Fonction de réinitialisation des champs du formulaire
   const resetForm = () => {
     setFirstName('')
     setLastName('')
@@ -35,7 +35,6 @@ export default function CreateEmployee() {
     setDepartment('')
   }
 
-  // Soumission du formulaire
   const handleSubmit = (e) => {
     e.preventDefault()
     const newEmployee = {
@@ -51,7 +50,7 @@ export default function CreateEmployee() {
     }
     dispatch(addEmployee(newEmployee))
     setShowModal(true)
-    resetForm() // ✅ Réinitialisation ici
+    resetForm()
   }
 
   return (

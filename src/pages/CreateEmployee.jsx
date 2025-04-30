@@ -22,6 +22,20 @@ export default function CreateEmployee() {
   const [zipCode, setZipCode] = useState('')
   const [department, setDepartment] = useState('')
 
+  // Fonction de réinitialisation des champs du formulaire
+  const resetForm = () => {
+    setFirstName('')
+    setLastName('')
+    setBirthDate('')
+    setStartDate('')
+    setStreet('')
+    setCity('')
+    setState('')
+    setZipCode('')
+    setDepartment('')
+  }
+
+  // Soumission du formulaire
   const handleSubmit = (e) => {
     e.preventDefault()
     const newEmployee = {
@@ -37,6 +51,7 @@ export default function CreateEmployee() {
     }
     dispatch(addEmployee(newEmployee))
     setShowModal(true)
+    resetForm() // ✅ Réinitialisation ici
   }
 
   return (

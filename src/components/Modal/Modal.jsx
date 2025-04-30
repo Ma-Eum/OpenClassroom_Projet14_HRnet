@@ -25,7 +25,13 @@ export default function Modal({ isOpen, onClose, title, children }) {
       >
         <div className="modal-header">
           <h2 id="modal-title">{title}</h2>
-          <button onClick={onClose} className="modal-close">×</button>
+          <button
+            onClick={onClose}
+            className="modal-close button"
+            aria-label="Fermer la modale"
+          >
+            ×
+          </button>
         </div>
         <div className="modal-body">
           {children}

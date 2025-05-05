@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { addEmployee } from '../store/employeesSlice'
 import Modal from 'react-modal-wh-maeum'
@@ -11,46 +11,54 @@ const states = ['California', 'Texas', 'Florida', 'New York']
 
 export default function CreateEmployee() {
   const dispatch = useDispatch()
-
   const [showModal, setShowModal] = useState(false)
-  const [firstName, setFirstName] = useState('')
-  const [lastName, setLastName] = useState('')
-  const [birthDate, setBirthDate] = useState('')
-  const [startDate, setStartDate] = useState('')
-  const [street, setStreet] = useState('')
-  const [city, setCity] = useState('')
-  const [state, setState] = useState('')
-  const [zipCode, setZipCode] = useState('')
-  const [department, setDepartment] = useState('')
 
-  const resetForm = () => {
-    setFirstName('')
-    setLastName('')
-    setBirthDate('')
-    setStartDate('')
-    setStreet('')
-    setCity('')
-    setState('')
-    setZipCode('')
-    setDepartment('')
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    birthDate: '',
+    startDate: '',
+    street: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    department: '',
+  })
+
+  // Chargement depuis localStorage au montage
+  useEffect(() => {
+    const saved = localStorage.getItem('employeeForm')
+    if (saved) {
+      setFormData(JSON.parse(saved))
+    }
+  }, [])
+
+  // Sauvegarde dans localStorage à chaque modification
+  useEffect(() => {
+    localStorage.setItem('employeeForm', JSON.stringify(formData))
+  }, [formData])
+
+  const handleChange = (field) => (e) => {
+    const value = e?.target?.value ?? e
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const newEmployee = {
-      firstName,
-      lastName,
-      birthDate,
-      startDate,
-      street,
-      city,
-      state,
-      zipCode,
-      department,
-    }
-    dispatch(addEmployee(newEmployee))
+    dispatch(addEmployee(formData))
     setShowModal(true)
-    resetForm()
+    setFormData({
+      firstName: '',
+      lastName: '',
+      birthDate: '',
+      startDate: '',
+      street: '',
+      city: '',
+      state: '',
+      zipCode: '',
+      department: '',
+    })
+    localStorage.removeItem('employeeForm')
   }
 
   return (
@@ -60,75 +68,67 @@ export default function CreateEmployee() {
         <input
           type="text"
           placeholder="Prénom"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
+          value={formData.firstName}
+          onChange={handleChange('firstName')}
           required
         />
         <input
           type="text"
           placeholder="Nom"
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
+          value={formData.lastName}
+          onChange={handleChange('lastName')}
           required
         />
-
         <DatePicker
           label="Date de naissance"
           name="birth-date"
-          value={birthDate}
-          onChange={setBirthDate}
+          value={formData.birthDate}
+          onChange={handleChange('birthDate')}
         />
-
         <DatePicker
           label="Date de début"
           name="start-date"
-          value={startDate}
-          onChange={setStartDate}
+          value={formData.startDate}
+          onChange={handleChange('startDate')}
         />
-
         <fieldset>
           <legend>Adresse</legend>
-
           <input
             type="text"
             placeholder="Rue"
-            value={street}
-            onChange={(e) => setStreet(e.target.value)}
+            value={formData.street}
+            onChange={handleChange('street')}
             required
           />
           <input
             type="text"
             placeholder="Ville"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
+            value={formData.city}
+            onChange={handleChange('city')}
             required
           />
-
           <Dropdown
             label="État"
             name="state"
             options={states}
-            value={state}
-            onChange={setState}
+            value={formData.state}
+            onChange={handleChange('state')}
           />
-
           <input
             type="text"
             placeholder="Code postal"
-            value={zipCode}
-            onChange={(e) => setZipCode(e.target.value)}
+            value={formData.zipCode}
+            onChange={handleChange('zipCode')}
             required
           />
         </fieldset>
-
         <Dropdown
           label="Département"
           name="department"
           options={departments}
-          value={department}
-          onChange={setDepartment}
+          value={formData.department}
+          onChange={handleChange('department')}
         />
-
         <button type="submit">Enregistrer</button>
       </form>
 

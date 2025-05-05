@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { addEmployee } from '../store/employeesSlice'
-import Modal from 'react-modal-wh'
-import 'react-modal-wh/dist/style.css'
+import Modal from 'react-modal-wh-maeum'
+import 'react-modal-wh-maeum/dist/style.css'
 import Dropdown from '../components/Dropdown/Dropdown'
 import DatePicker from '../components/DatePicker/DatePicker'
 

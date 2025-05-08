@@ -5,9 +5,8 @@ import Modal from 'react-modal-wh-maeum'
 import 'react-modal-wh-maeum/dist/style.css'
 import Dropdown from '../components/Dropdown/Dropdown'
 import DatePicker from '../components/DatePicker/DatePicker'
-
-const departments = ['Marketing', 'Sales', 'Engineering', 'HR']
-const states = ['California', 'Texas', 'Florida', 'New York']
+import { usStates } from '../data/usStates'
+import { departments } from '../data/departments'
 
 export default function CreateEmployee() {
   const dispatch = useDispatch()
@@ -156,10 +155,10 @@ export default function CreateEmployee() {
           <Dropdown
             label="État"
             name="state"
-            options={states}
+            options={usStates}
             value={formData.state}
             onChange={handleChange('state')}
-          />
+          />                
           {errors.state && <p className="error">{errors.state}</p>}
 
           <input

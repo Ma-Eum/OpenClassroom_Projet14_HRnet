@@ -70,6 +70,7 @@ button:disabled {
 
 /* Formulaires */
 input, select {
+  box-sizing: border-box;
   width: 100%;
   padding: 0.4rem;
   margin-bottom: 1rem;
@@ -85,6 +86,19 @@ form {
   box-shadow: var(--shadow);
   max-width: 600px;
   margin: 0 auto;
+}
+
+fieldset {
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin: -1rem 0 1rem 0;
 }
 
 /* Footer */

@@ -1,0 +1,21 @@
+LICENCE ISC (version simplifiée en français)
+
+Droits d'utilisation :
+
+Vous pouvez utiliser gratuitement ce logiciel pour n'importe quel usage : personnel, professionnel, commercial ou éducatif.  
+Vous avez également le droit de copier, modifier et distribuer ce logiciel.
+
+Conditions à respecter :
+
+- Si vous distribuez ce logiciel (modifié ou non), vous devez inclure une copie de cette licence.
+- Vous devez également mentionner le nom de l’auteur d’origine.
+
+Absence de garantie :
+
+Ce logiciel est fourni tel quel, **sans aucune garantie**.  
+L’auteur ne pourra pas être tenu responsable en cas de problème, perte ou dommage lié à l’utilisation de ce logiciel.
+
+---
+
+Auteur : MaeumClaire
+Date : 05/2025

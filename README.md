@@ -1,12 +1,43 @@
-# React + Vite
+# HRnet - Gestion des employés
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet React pour la conversion d'une ancienne application jQuery vers un système moderne de gestion RH.
 
-Currently, two official plugins are available:
+## 🧰 Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 19
+- Redux Toolkit
+- Vite
+- react-data-table-component
+- react-modal-wh-maeum
 
-## Expanding the ESLint configuration
+## 🚀 Lancement du projet
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/votre-utilisateur/hrnet-react.git
+cd hrnet-react
+npm install
+npm run dev
+```
+
+## 📁 Structure
+
+- `/src/pages/` : vues principales (création, liste)
+- `/components/` : composants réutilisables
+- `/store/` : slice Redux
+- `DatePicker`, `Dropdown`, `Modal` : composants d’UI
+
+## ✅ Fonctionnalités
+
+- Création d’un employé via un formulaire dynamique
+- Validation et contraintes (âge minimum, champs requis)
+- Affichage dans un tableau
+- Persistance via `localStorage`
+- Modale de confirmation
+
+## 🧪 Tests
+
+Les tests peuvent être ajoutés avec React Testing Library.
+
+## 📝 Licence
+
+Ce projet est sous licence ISC.

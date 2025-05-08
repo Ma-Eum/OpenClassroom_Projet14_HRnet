@@ -1,0 +1,44 @@
+
+Audit de performance - Comparatif React vs jQuery HRnet
+========================================================
+
+✅ Objectif :
+Mesurer l'amélioration des performances lors du passage de l'application HRnet de jQuery à React.
+
+--------------------------------------------------------
+
+🔎 Méthodologie :
+- Outils utilisés : Google Lighthouse (via Chrome DevTools)
+- Métriques analysées : Performance, First Contentful Paint (FCP), Largest Contentful Paint (LCP), Speed Index
+- Environnement : audit effectué sur la version buildée (production) de l’application React et sur l'application jQuery lancée via Live Server.
+
+--------------------------------------------------------
+
+📊 Résultats des audits :
+
+1. ⚛️ Application React (vite build)
+
+- First Contentful Paint : 2.8 s
+- Largest Contentful Paint : 3.2 s
+- Speed Index : 3.3 s
+- Performance score : ✅ supérieur à jQuery
+
+2. 📜 Application jQuery (version originale)
+
+- First Contentful Paint : 3.8 s
+- Largest Contentful Paint : 3.9 s
+- Speed Index : 3.8 s
+- Performance score : ⛔ inférieur à React
+
+--------------------------------------------------------
+
+✅ Conclusion :
+
+Le passage à React a permis une **réduction significative du temps de chargement** grâce à un build optimisé avec Vite.  
+L’application React se montre **plus rapide et performante** à l'affichage, offrant une meilleure expérience utilisateur.
+
+--------------------------------------------------------
+
+📎 Fichiers joints (issus de Google Lighthouse) :
+- `localhost_4173-20250508T213408.html` → audit de la version React
+- `127.0.0.1_5500-20250508T213928.html` → audit de la version jQuery

@@ -56,6 +56,7 @@ export default function CreateEmployee() {
     if (!formData.birthDate) newErrors.birthDate = 'La date de naissance est requise.'
     else if (!isLegalAge(formData.birthDate)) newErrors.birthDate = 'L’âge minimum est 16 ans.'
     if (!formData.startDate) newErrors.startDate = 'La date de début est requise.'
+    else if (new Date(formData.startDate) > new Date()) newErrors.startDate = 'La date de début ne peut pas être dans le futur.'
     if (!formData.street.trim()) newErrors.street = 'La rue est requise.'
     if (!formData.city.trim()) newErrors.city = 'La ville est requise.'
     if (!formData.state) newErrors.state = 'L’état est requis.'
@@ -158,7 +159,7 @@ export default function CreateEmployee() {
             options={usStates}
             value={formData.state}
             onChange={handleChange('state')}
-          />                
+          />
           {errors.state && <p className="error">{errors.state}</p>}
 
           <input

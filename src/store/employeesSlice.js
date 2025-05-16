@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  employees: [],
+  employees: [], // le store injectera le bon contenu via preloadedState
 }
 
 const employeesSlice = createSlice({

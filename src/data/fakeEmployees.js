@@ -1,0 +1,243 @@
+export const fakeEmployees = [
+  {
+    "firstName": "Andrew",
+    "lastName": "Mann",
+    "birthDate": "1997-08-28",
+    "startDate": "2023-09-09",
+    "street": "82144 William Locks Apt. 499",
+    "city": "West Jessicafort",
+    "state": "Rhode Island",
+    "zipCode": "46595",
+    "department": "Human Resources"
+  },
+  {
+    "firstName": "Mary",
+    "lastName": "Crawford",
+    "birthDate": "2005-03-23",
+    "startDate": "2023-07-16",
+    "street": "6021 Burke Land Suite 470",
+    "city": "Burtonborough",
+    "state": "Utah",
+    "zipCode": "01613",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Alexa",
+    "lastName": "Hawkins",
+    "birthDate": "1978-01-15",
+    "startDate": "2011-07-27",
+    "street": "659 Lawson Cove Apt. 349",
+    "city": "South Davidside",
+    "state": "Alabama",
+    "zipCode": "75870",
+    "department": "Marketing"
+  },
+  {
+    "firstName": "William",
+    "lastName": "Esparza",
+    "birthDate": "1987-03-13",
+    "startDate": "2013-08-25",
+    "street": "19539 Lam Walks Apt. 593",
+    "city": "West Mariofort",
+    "state": "North Dakota",
+    "zipCode": "15671",
+    "department": "Legal"
+  },
+  {
+    "firstName": "Alex",
+    "lastName": "Howard",
+    "birthDate": "1980-04-18",
+    "startDate": "2004-01-03",
+    "street": "94670 Collins Coves",
+    "city": "Lake Ashleyburgh",
+    "state": "South Dakota",
+    "zipCode": "63769",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Kelly",
+    "lastName": "Ortega",
+    "birthDate": "1994-11-16",
+    "startDate": "2021-04-14",
+    "street": "569 Meyer Unions Apt. 420",
+    "city": "Smithbury",
+    "state": "South Carolina",
+    "zipCode": "55258",
+    "department": "Marketing"
+  },
+  {
+    "firstName": "Troy",
+    "lastName": "Nichols",
+    "birthDate": "1989-10-20",
+    "startDate": "2021-10-05",
+    "street": "66399 Matthews Streets Apt. 212",
+    "city": "Davidfort",
+    "state": "Oregon",
+    "zipCode": "21846",
+    "department": "Marketing"
+  },
+  {
+    "firstName": "Courtney",
+    "lastName": "Zhang",
+    "birthDate": "1966-01-16",
+    "startDate": "2008-06-07",
+    "street": "11558 Smith Camp Apt. 127",
+    "city": "Staceyfurt",
+    "state": "Michigan",
+    "zipCode": "57296",
+    "department": "Engineering"
+  },
+  {
+    "firstName": "Jennifer",
+    "lastName": "Bradley",
+    "birthDate": "1964-08-03",
+    "startDate": "2002-07-17",
+    "street": "613 Keller Shoal",
+    "city": "Fosterchester",
+    "state": "North Dakota",
+    "zipCode": "33883",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Lauren",
+    "lastName": "Flynn",
+    "birthDate": "1990-05-28",
+    "startDate": "2023-04-23",
+    "street": "10345 Lindsey Pines Apt. 961",
+    "city": "Port Jaclynborough",
+    "state": "New Mexico",
+    "zipCode": "06601",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Terry",
+    "lastName": "Obrien",
+    "birthDate": "2003-12-09",
+    "startDate": "2024-10-12",
+    "street": "6477 Kevin Cove",
+    "city": "Lake Eileen",
+    "state": "New Jersey",
+    "zipCode": "66659",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Amanda",
+    "lastName": "Yates",
+    "birthDate": "1986-07-25",
+    "startDate": "2016-03-16",
+    "street": "99496 Craig Trail Suite 673",
+    "city": "Lake Dorothychester",
+    "state": "South Dakota",
+    "zipCode": "60588",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Nancy",
+    "lastName": "Benson",
+    "birthDate": "1988-03-07",
+    "startDate": "2013-02-22",
+    "street": "0981 Miller Cliffs Suite 479",
+    "city": "South Sarahbury",
+    "state": "Oregon",
+    "zipCode": "12482",
+    "department": "Engineering"
+  },
+  {
+    "firstName": "Angel",
+    "lastName": "Petty",
+    "birthDate": "2001-10-06",
+    "startDate": "2020-12-10",
+    "street": "375 Thomas Junction",
+    "city": "Kaiserchester",
+    "state": "Palau",
+    "zipCode": "85139",
+    "department": "Marketing"
+  },
+  {
+    "firstName": "Marie",
+    "lastName": "Soto",
+    "birthDate": "1992-06-30",
+    "startDate": "2020-02-06",
+    "street": "386 James Ville Suite 102",
+    "city": "Daughertyside",
+    "state": "Oregon",
+    "zipCode": "16733",
+    "department": "Engineering"
+  },
+  {
+    "firstName": "Kimberly",
+    "lastName": "Martin",
+    "birthDate": "1983-05-09",
+    "startDate": "2017-11-21",
+    "street": "25628 Kirk Islands Apt. 772",
+    "city": "East Amber",
+    "state": "Guam",
+    "zipCode": "13973",
+    "department": "Marketing"
+  },
+  {
+    "firstName": "Sarah",
+    "lastName": "Mcdowell",
+    "birthDate": "1996-11-20",
+    "startDate": "2018-12-25",
+    "street": "839 Stephanie Villages Apt. 108",
+    "city": "Lake Jacqueline",
+    "state": "Rhode Island",
+    "zipCode": "06202",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Patrick",
+    "lastName": "Castillo",
+    "birthDate": "1973-05-30",
+    "startDate": "2010-07-24",
+    "street": "2757 Jennifer Burg",
+    "city": "Shepardburgh",
+    "state": "Nebraska",
+    "zipCode": "43406",
+    "department": "Sales"
+  },
+  {
+    "firstName": "Kathryn",
+    "lastName": "Poole",
+    "birthDate": "1995-10-08",
+    "startDate": "2021-02-03",
+    "street": "9145 Tracy Ports Suite 086",
+    "city": "Robertsfurt",
+    "state": "Federated States Of Micronesia",
+    "zipCode": "88644",
+    "department": "Legal"
+  },{
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "birthDate": "1992-04-15",
+    "startDate": "2021-06-10",
+    "street": "123 Maple Street",
+    "city": "Denver",
+    "state": "Colorado",
+    "zipCode": "80203",
+    "department": "Human Resources"
+  },
+  {
+    "firstName": "Bob",
+    "lastName": "Smith",
+    "birthDate": "1987-09-25",
+    "startDate": "2020-03-22",
+    "street": "456 Oak Avenue",
+    "city": "Austin",
+    "state": "Texas",
+    "zipCode": "73301",
+    "department": "Engineering"
+  },
+  {
+    "firstName": "Samantha",
+    "lastName": "Nichols",
+    "birthDate": "1984-11-03",
+    "startDate": "2005-06-22",
+    "street": "076 Amy Land Apt. 471",
+    "city": "North Lori",
+    "state": "Arkansas",
+    "zipCode": "95107",
+    "department": "Legal"
+  }
+];
